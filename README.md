@@ -14,7 +14,7 @@ BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users t
 ## 🔥 Key Features  
 
 - **[Homepage](#-modern--stylish-homepage)** - Homepae of the App with all options.
-- **[QR Code Payment](api/send-payment.md)** – Scan a QR code to pay instantly.  
+- **[QR Code Payment](#scan-qr-code-to-pay)** – Scan a QR code to pay instantly.  
 - **[Pay Any User](api/send-payment.md)** – Send BB Points to any user via their Telegram ID.  
 - **[Request Payment](api/request.md)** – Easily request payments from users.  
 - **[Create Invoice](api/create-invoice.md)** – Generate invoices for payments.  
@@ -33,13 +33,10 @@ BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users t
 
 
 # Homepage – BB Point WebApp Bot  
-
-## 🏠 Modern & Stylish Homepage  
-
 The **BB Point WebApp Bot** homepage provides a **clean, modern, and intuitive interface** for seamless transactions. It is designed to make navigation easy, with all **core functions accessible via icons** at the top and a **transaction history** section below.  
 
 ### 🖼️ Screenshot of Homepage  
-![Homepage Screenshot](https://i.ibb.co/2Ys44TPd/1000009574-portrait.png)  
+![Homepage Screenshot](https://github.com/nasirul786/BB-Point-API/blob/main/img/home-bbp.jpg)  
 
 ---
 
@@ -90,6 +87,47 @@ To access the **Settings page**:
 - **Full-Screen View** – The bot runs in **full-screen mode**, fully optimized for **Telegram’s WebApp ecosystem**.  
 
 BB Point WebApp Bot's homepage ensures a **smooth, intuitive, and efficient experience**, making it **easy to manage BB Point transactions with a few taps!** 🚀  
+
+
+# Scan QR Code to Pay  
+The **BB Point WebApp Bot** allows users to **scan QR codes** for **quick and seamless payments**. The QR code scanner is fully integrated with **Telegram's native scanning feature**, ensuring fast and secure transactions.  
+
+### 🖼️ Screenshot of Scan QR Page  
+![Scan QR Code Screenshot](https://github.com/nasirul786/BB-Point-API/blob/main/img/qr-scan.jpg)  
+
+---
+
+## 🚀 **How to Use the QR Code Scanner**  
+
+1. Click the **QR scanner icon** on the **homepage**.  
+2. The **QR code scanner opens automatically**.  
+3. **Scan the recipient’s QR code** (user or invoice).  
+4. The app **detects the QR type** and processes accordingly:  
+   - **Invoice QR** → Directly opens the **PIN input popup** for confirmation.  
+   - **User Payment QR** → Opens the **send payment page** with the recipient’s details.  
+5. **Enter your PIN** to confirm and complete the transaction.  
+
+---
+
+## 🔍 **QR Code Detection & Processing**  
+
+The scanner **automatically detects** the type of QR code being scanned:
+the QR title (receiver name) shows above the fileds, each fields hase representive icons from font awesome library.
+
+| QR Type | Action |
+|---------|--------|
+| **Invoice QR** | Opens the **PIN input popup** instantly for payment confirmation. |
+| **User Payment QR** | Pre-fills the payment page with recipient details for manual confirmation. |
+
+- The payment process **uses the [Send Payment API](https://github.com/nasirul786/BB-Point-API/blob/main/api/send-payment.md)**, meaning:  
+  - **Fake invoices** or incorrect payments **are automatically detected**.  
+  - If **an error occurs**, the bot **displays a Telegram-style popup** with detailed information and provides **haptic feedback**.  
+
+The **QR code scanner** is a **built-in Telegram WebApp feature** and can be invoked using:  
+
+```js
+Windows.Telegram.WebApp.showScanQrPopup(params[, callback]);
+```
 
 ## Why Use BB Point WebApp Bot?  
 - ✅ **Fast, secure, and API-ready**  
