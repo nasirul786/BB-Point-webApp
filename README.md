@@ -17,9 +17,7 @@ BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users t
 - **[QR Code Payment](#scan-qr-code-to-pay)** – Scan a QR code to pay instantly.  
 - **[Pay Any User](api/send-payment.md)** – Send BB Points to any user via their Telegram ID.  
 - **[Request Payment](api/request.md)** – Easily request payments from users.  
-- **[Create Invoice](api/create-invoice.md)** – Generate invoices for payments.  
-- **[Invoice Status](api/invoice-status.md)** – Check the status of any invoice.  
-- **[Pay Invoice](api/send-payment.md)** – Pay invoices using QR code or payment link.  
+- **[Create & manage Invoice](https://captain-1.gitbook.io/bb-point-api/api-documentation/create-invoice)** – Generate invoices for accepting payments.
 - **[Create Gift](api/create-gift.md)** – Distribute BB Points among multiple users with an optional password.  
 - **[Claim Gift](api/claim-gift.md)** – Users can redeem gifts securely.  
 - **[Block/Accept Payment Requests](api/get-settings.md)** – Control whether you accept incoming payment requests.  
@@ -128,6 +126,146 @@ The **QR code scanner** is a **built-in Telegram WebApp feature** and can be inv
 ```js
 Windows.Telegram.WebApp.showScanQrPopup(params[, callback]);
 ```
+
+
+
+# Pay to Any User  
+The **Pay to Any User** feature allows users to **send BB Points** directly to any Telegram user by entering their **User ID**, amount, and an optional note. The **payment process is highly secure**, utilizing the same **public APIs** with **PIN verification** for protection.  
+
+---
+
+🖼️ Screenshot of Pay to User Page  
+![Pay to User Screenshot](https://github.com/nasirul786/BB-Point-API/blob/main/img/send-payment.jpg)  
+
+---
+
+🚀 **How to Send Payment to a User**  
+
+1. **Open the Payment Page**
+   - Click **Send** button. 
+   - Unlike the **QR payment** page, the scanner does **not open automatically** (`scan=false` is used as an identifier).  
+
+2. **Enter Payment Details**  
+   - **User ID** – Enter the recipient's Telegram ID.  
+   - **Amount** – Enter the amount of BB Points to send.  
+   - **Note (Optional)** – Add a short description for the payment.  
+
+3. **Confirm Payment**  
+   - Click the **"Send Payment"** button.  
+   - The **PIN input popup** appears for verification.  
+   - Enter your **PIN** and confirm to proceed.  
+
+4. **Transaction Processing & Confirmation**  
+   - If successful, the bot displays the **payment details**.  
+   - If the **PIN is incorrect** or **balance is insufficient**, the bot:  
+     - **Vibrates** (haptic feedback).  
+     - Shows a **Telegram-style error popup** explaining the issue.  
+
+---
+
+🔒 **Security & Processing**  
+
+- The transaction is **processed securely** using the **[Send Payment API](api/send-payment.md)**.  
+- **All transactions require PIN verification**, ensuring that only the account owner can authorize payments.  
+- Transactions **cannot be reversed** once completed.  
+
+---
+
+🔔 **Payment Notifications & Webhooks**  
+
+- **Transaction Announcements**  
+  - If **both sender and receiver** have enabled **transaction announcements** in settings, they will receive a **notification**.  
+
+- **Webhook Notifications**  
+  - If a **webhook is set**, a **real-time transaction notification** is sent.  
+  - If **no webhook is set**, the process **ignores the webhook step** without errors.
+  - See all webhook types [Here](https://github.com/nasirul786/BB-Point-API/blob/main/api/webhook-types.md)
+ 
+
+# Request Payment  
+The **Request Payment** feature allows users to **send a payment request** to any Telegram user by entering their **User ID**, amount, and an optional note. The process is similar to **Send Payment**, but instead of sending BB Points, it **requests** them.  
+
+**Requesting Screenshot**
+
+![request](https://github.com/nasirul786/BB-Point-API/blob/main/img/success-request.jpg)
+
+**Requst Failed**
+
+![faild request](https://github.com/nasirul786/BB-Point-API/blob/main/img/request-failed.jpg)
+
+---
+
+🚀 **How to Request a Payment**
+Click **Request** button on the home screen to go to request section. 
+
+1. Enter **User ID**, **Amount** and optional **Note**.
+2. Click **Request Payment** and enter pin to confirm.  
+3. **Success Confirmation**  
+   - If successful, a **popup** appears with the **request ID** and details.  
+   - The recipient gets notified of the request with all the details along with button to accept or reject te rqust.
+ > Webhook notification will e sent once the request is beeing accepted.
+
+
+# Create Gift  
+The **Create Gift** feature allows users to distribute BB Points among multiple recipients securely. Users can set a **title, description, and a password** (optional) for extra protection.  
+
+---
+
+🖼️ Screenshot of Create Gift Page  
+![Create Gift Screenshot](https://github.com/nasirul786/BB-Point-API/blob/main/img/create-gift.jpg) 
+
+**Gift Details on DM**
+![gift on dm](https://github.com/nasirul786/BB-Point-API/blob/main/img/gift-dm.jpg)
+
+---
+
+🚀 **How to Create a Gift**  
+
+1. **Open the Gift Section**  
+   - Click the **"Gifts"** button on the homepage.  
+   - Select **"Create Gift"** to proceed.  
+
+2. **Enter Gift Details**  
+
+| Field          | Required | Description |
+|---------------|----------|-------------|
+| **Amount**    | ✅ Yes  | Total BB Points to distribute. |
+| **Title**     | ✅ Yes  | Gift name (e.g., "Birthday Gift"). |
+| **Description** | ✅ Yes  | Short note about the gift. |
+| **Total Users** | ✅ Yes  | Number of users who can claim (must be less than the amount). |
+| **Password**  | ❌ No   | Optional password to restrict claims. |
+
+3. **Add Password Protection (Optional)**  
+   - Click **"Add Password"** to enable the password field.  
+   - A **password-protected gift cannot be claimed without the exact password**.  
+
+4. **Confirm & Send**  
+   - Click **"Create Gift"** and enter your **PIN** for verification.  
+   - The system **automatically calculates** the **prize per user** based on the total amount and user count.  
+
+---
+
+🎁 **Gift Creation Confirmation**  
+
+| Field          | Description |
+|---------------|-------------|
+| **Gift Code** | A unique code for claiming the gift. |
+| **Title**     | The gift name. |
+| **Description** | The custom message attached. |
+| **Total Users** | Number of recipients. |
+| **Prize Per User** | Amount each user will receive. |
+| **Password** | If set, it must be entered to claim. |
+
+> 🎉 *A popup appears with the gift details, and the user receives a direct message with the gift code. and option to sharewith the other user*  
+
+---
+
+🔔 **Additional Notes**  
+
+- **Gift code is required** for claiming gifts.  
+- **Password-protected gifts require the exact password**.  
+- If **PIN verification fails**, the bot will **vibrate and show a Telegram-style popup** with the issue.
+
 
 ## Why Use BB Point WebApp Bot?  
 - ✅ **Fast, secure, and API-ready**  
