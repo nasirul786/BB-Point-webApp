@@ -1,84 +1,42 @@
 # bbp_app_bot - chat bot
 It is repository for chat bot: [@bbp_app_bot](https://t.me/bbp_app_bot)
 
-## What it is?
-This repository can be imported to [Bots.Business](https://bots.business) as a worked chat bot.
+# Introduction
 
-[Bots.Business](https://bots.business) - it is probably the first CBPaaS - Chat Bot Platform as a Service.
+## BB Point WebApp Bot  
 
-A CBPaaS is a cloud-based platform that enables developers to create chatbots without needing to build backend infrastructure.
+**BB Point WebApp Bot** is a powerful **Telegram WebApp bot** designed to provide a **seamless, secure, and feature-rich** payment experience. It offers **API support** and multiple advanced functionalities, making it an essential tool for transactions within the Telegram ecosystem.  
 
-## Create your own bot for Telegram from this Git repo
+With an intuitive **user interface, QR code scanning, haptic feedback, and easy navigation**, users can perform various financial actions effortlessly. Every transaction is **secured with PIN verification**, ensuring **maximum security**, even though the bot is **open-source**.  
 
-How to create bot?
-1. Create bot with [@BotFather](https://telegram.me/BotFather) and take Secret Token
-2. Create bot in App and add Secret Token
-3. Add Public Key from App as [Deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) with read access (and write access for bot exporting if you need it)
-4. Do import for this git repo
+BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users to **buy BB Points using stars** and track their last 5 transactions. Since **large-scale data storage is not maintained** (to prevent whole-user issues), we provide **webhook support** to notify users in real time about their transactions.  
 
-Now you can talk with yours new Telegram Bot
+## 🔥 Key Features  
 
-See [more](https://help.bots.business/getting-started)
+- **[Homepage](#homepage)** - Homepae of the App with all options.
+- **[QR Code Payment](api/send-payment.md)** – Scan a QR code to pay instantly.  
+- **[Pay Any User](api/send-payment.md)** – Send BB Points to any user via their Telegram ID.  
+- **[Request Payment](api/request.md)** – Easily request payments from users.  
+- **[Create Invoice](api/create-invoice.md)** – Generate invoices for payments.  
+- **[Invoice Status](api/invoice-status.md)** – Check the status of any invoice.  
+- **[Pay Invoice](api/send-payment.md)** – Pay invoices using QR code or payment link.  
+- **[Create Gift](api/create-gift.md)** – Distribute BB Points among multiple users with an optional password.  
+- **[Claim Gift](api/claim-gift.md)** – Users can redeem gifts securely.  
+- **[Block/Accept Payment Requests](api/get-settings.md)** – Control whether you accept incoming payment requests.  
+- **[Transaction Announcements](api/get-settings.md)** – Enable announcements for successful transactions.  
+- **[Set Webhook URL](api/update-settings.md)** – Configure a webhook to receive real-time transaction updates.  
+- **[Webhook Notifications](api/webhook-types.md)** – Get instant notifications for every transaction.  
+- **[PIN Verification](api/update-settings.md)** – Secure each transaction with a **PIN**.  
+- **[Buy BB Points with Telegram Stars](api/BBP-purchase.md)** – Exchange **Stars** for **BB Points**.  
+- **[Get Last 5 Transactions](api/account.md)** – Retrieve the latest transaction history.  
+- **[Easy Navigation & Haptic Feedback](README.md)** – Smooth user experience with **Telegram’s back function & device navigation support**.  
 
-## Commands - in commands folder
-File name - it is command name (Bot it can be rewritten in command description)
+## Why Use BB Point WebApp Bot?  
+- ✅ **Fast, secure, and API-ready**  
+- ✅ **Intuitive interface & navigation**  
+- ✅ **Highly secure PIN-based transactions**  
+- ✅ **Open-source yet highly protected**  
+- ✅ **Real-time webhook notifications**  
+- ✅ **Seamless Telegram integration**  
 
-Command can have: `name`, `help`, `aliases` (second names), `answer`, `keyboard`, `scnarios` (for simple logic) and other options.
-
-### Command description
-It is file header:
-
-    /*CMD
-      command: /test
-      help: this is help for ccommand
-      need_reply: [ true or false here ]
-      auto_retry_time: [ time in sec ]
-      answer: it is example answer for /test command
-      keyboard: button1, button2
-      aliases: /test2, /test3
-    CMD*/
-
-See [more](https://help.bots.business/commands)
-
-### Command body
-It is command code in JavaScript.
-Use Bot Java Script for logic in command.
-
-For example:
-> Bot.sendMessage(2+2);
-
-See [more](https://help.bots.business/scenarios-and-bjs)
-
-
-## Libraries - in libs folder
-You can store common code in the libs folder. File name - it is library name.
-
-For example code in myLib.js:
-
-    function hello(){ Bot.sendMessage("Hello from lib!") }
-    function goodbye(name){ Bot.sendMessage("Goodbye, " + name) }
-
-    publish({
-      sayHello: hello,
-      sayGoodbyeTo: goodbye
-    })
-
-then you can run in any bot's command:
-
-    Libs.myLib.hello()
-    Libs.myLib.sayGoodbyeTo("Alice")
-
-See [more](https://help.bots.business/git/library)
-
-## Other bots example
-See other bots examples in the [github](https://github.com/bots-business?utf8=✓&tab=repositories&q=&type=public&language=javascript) or in the [Bot Store](https://bots.business/)
-
-
-## Other help
-[Help.bots.business](https://help.bots.business)
-
-## API
-See [API](https://api.bots.business/docs#/docs/summary)
-
-
-![](https://bots.business/images/web-logo.png)
+Ready to explore? Get started with the **[API Documentation](SUMMARY.md)**. 🚀
