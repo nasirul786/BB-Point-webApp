@@ -35,12 +35,12 @@ BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users t
 # Homepage – BB Point WebApp Bot  
 The **BB Point WebApp Bot** homepage provides a **clean, modern, and intuitive interface** for seamless transactions. It is designed to make navigation easy, with all **core functions accessible via icons** at the top and a **transaction history** section below.  
 
-### 🖼️ Screenshot of Homepage  
+**🖼️ Screenshot of Homepage**  
 ![Homepage Screenshot](https://github.com/nasirul786/BB-Point-API/blob/main/img/home-bbp.jpg)  
 
 ---
 
-## 🔹 **Available Buttons & Features** 
+🔹 **Available Buttons & Features** 
 Buttons are design with svg icons.
 
 The homepage consists of **six primary buttons**, allowing users to **perform transactions effortlessly**:  
@@ -70,7 +70,7 @@ Below the action buttons, the homepage displays the **last 5 transactions**. Eac
 
 ---
 
-## ⚙️ **Navigating to Settings**  
+⚙️ **Navigating to Settings**  
 
 To access the **Settings page**:  
 
@@ -92,12 +92,12 @@ BB Point WebApp Bot's homepage ensures a **smooth, intuitive, and efficient expe
 # Scan QR Code to Pay  
 The **BB Point WebApp Bot** allows users to **scan QR codes** for **quick and seamless payments**. The QR code scanner is fully integrated with **Telegram's native scanning feature**, ensuring fast and secure transactions.  
 
-### 🖼️ Screenshot of Scan QR Page  
+#### 🖼️ Screenshot of Scan QR Page  
 ![Scan QR Code Screenshot](https://github.com/nasirul786/BB-Point-API/blob/main/img/qr-scan.jpg)  
 
 ---
 
-## 🚀 **How to Use the QR Code Scanner**  
+**🚀 How to Use the QR Code Scanner**  
 
 1. Click the **QR scanner icon** on the **homepage**.  
 2. The **QR code scanner opens automatically**.  
@@ -109,7 +109,7 @@ The **BB Point WebApp Bot** allows users to **scan QR codes** for **quick and se
 
 ---
 
-## 🔍 **QR Code Detection & Processing**  
+🔍 **QR Code Detection & Processing**  
 
 The scanner **automatically detects** the type of QR code being scanned:
 the QR title (receiver name) shows above the fileds, each fields hase representive icons from font awesome library.
