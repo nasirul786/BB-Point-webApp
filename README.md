@@ -39,7 +39,7 @@ BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users t
 The **BB Point WebApp Bot** homepage provides a **clean, modern, and intuitive interface** for seamless transactions. It is designed to make navigation easy, with all **core functions accessible via icons** at the top and a **transaction history** section below.  
 
 ### 🖼️ Screenshot of Homepage  
-![Homepage Screenshot](api/images/homepage.png)  
+![Homepage Screenshot](https://i.ibb.co/2Ys44TPd/1000009574-portrait.png)  
 
 ---
 
