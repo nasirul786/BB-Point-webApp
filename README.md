@@ -13,7 +13,7 @@ BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users t
 
 ## 🔥 Key Features  
 
-- **[Homepage](#homepage)** - Homepae of the App with all options.
+- **[Homepage](#-modern--stylish-homepage)** - Homepae of the App with all options.
 - **[QR Code Payment](api/send-payment.md)** – Scan a QR code to pay instantly.  
 - **[Pay Any User](api/send-payment.md)** – Send BB Points to any user via their Telegram ID.  
 - **[Request Payment](api/request.md)** – Easily request payments from users.  
