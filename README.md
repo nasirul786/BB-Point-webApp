@@ -18,11 +18,10 @@ BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users t
 - **[Create & manage Invoice](https://captain-1.gitbook.io/bb-point-api/api-documentation/create-invoice)** – Generate invoices for accepting payments.
 - **[Create Gift](api/create-gift.md)** – Distribute BB Points among multiple users with an optional password.  
 - **[Claim Gift](api/claim-gift.md)** – Users can redeem gifts securely.  
-- **[Settings](api/get-settings.md)** – Manage payments toggle accept requests setting , set a webhook for real-time alerts, and toggle transaction announcements! 🚀 
-- **[PIN Verification](api/update-settings.md)** – Secure each transaction with a **PIN**.  
+- **[Settings](api/get-settings.md)** – Manage settings: Request , Webhook for real-time alerts, and toggle transaction announcements! 🚀
 - **[Buy BB Points with Telegram Stars](api/BBP-purchase.md)** – Exchange **Stars** for **BB Points**.
-- **[Easy Navigation & Haptic Feedback](README.md)** – Smooth user experience with **Telegram’s back function & device navigation support**.
-
+- **[Dependencies](#)** - The libraries and api used to make this bot possible.
+- **[For Tester](#)** - Addition notes and Check why this app is greate.
 
 # Homepage – BB Point WebApp Bot  
 The **BB Point WebApp Bot** homepage provides a **clean, modern, and intuitive interface** for seamless transactions. It is designed to make navigation easy, with all **core functions accessible via icons** at the top and a **transaction history** section below.  
@@ -300,6 +299,166 @@ Since the bot **does not store complete transaction history** due to limitations
 - This allows users to **store transaction history** on their own servers.  
 - Refer to the **[Webhook Types](https://captain-1.gitbook.io/bb-point-api/api-documentation/webhook-types)** page to see all available webhook notifications.
 > With these settings, users have **full control** over how their transactions are managed, announced, and stored. 🚀  
+
+
+
+# Buy BB Point  
+The **Buy BB Point** feature allows users to purchase **BB Points using Telegram Stars**, providing a **fast, secure, and seamless** payment experience.  
+
+---
+
+## 🖼️ Buy BB Point Page  
+![Buy BBP Screenshot](https://github.com/nasirul786/BB-Point-API/blob/main/img/buybbp.jpg)  
+
+---
+
+**🚀 How to Buy BB Points**  
+
+1. **Click the "Buy BBP" icon** on the homepage.  
+2. **Enter the number of Stars** you want to use for purchasing BB Points.  
+   - **1 Star = 2 BB Points**.  
+3. *(Optional)* **Buy for another user**  
+   - Click **"Buy for Other"** to unlock the **User ID field**.  
+   - Enter the **Telegram ID** of the recipient.  
+
+4. **Confirm Purchase**  
+   - A Telegram payment popup will appear.  
+   - Confirm the payment using **Telegram Stars**.  
+
+5. **Transaction Confirmation**  
+   - If the purchase is **successful**, a popup confirms the transaction.  
+   - If the payment is **canceled**, a **haptic feedback alert** and a popup notify the user.  
+
+---
+
+**⚠️ Important Notes**  
+
+- **No refunds** are processed if the **wrong User ID** is entered.  
+- Payments are handled through **Telegram’s secure Stars payment system**.  
+- Transactions are **instant** and credited to the recipient immediately.
+
+
+
+# Dependencies & Libraries  
+The **BB Point WebApp Bot** relies on several **libraries and services** to provide a **seamless, feature-rich, and visually appealing experience**. These dependencies help with **Telegram integration, QR code generation, UI styling, and free hosting**.  
+
+
+🔹 **Telegram WebApp SDK**  
+- **URL:** [Telegram WebApp SDK](https://telegram.org/js/telegram-web-app.js?56)  
+- **Purpose:** Integrates the web app with the **Telegram ecosystem**, enabling features like **haptic feedback, QR code scanning, payment popups, and full-screen mode**.  
+- **Documentation:** [Initializing Mini Apps](https://core.telegram.org/bots/webapps#initializing-mini-apps)  
+
+
+🔹 **QuickChart QR Code API**  
+- **URL:** [`https://quickchart.io/qr?text=`](https://quickchart.io/qr-code-api/)  
+- **Purpose:** Generates **QR codes** for payment links, user identification, and invoices.  
+- **Why?** Provides a **fast and free** way to create **customizable QR codes** without requiring additional code.  
+
+
+🔹 **Bootstrap**  
+- **URL:** [Bootstrap](https://getbootstrap.com/)  
+- **Purpose:** Adds **responsive design and UI styling** to make the web app look clean and professional.  
+- **Usage:** Used for **layout structuring, modals, buttons, and form styling** to ensure a **consistent** and **mobile-friendly** experience.  
+
+
+🔹 **Font Awesome**  
+- **URL:** [Font Awesome](https://fontawesome.com/)  
+- **Purpose:** Provides **icons** for a **modern and visually appealing** interface.  
+- **Usage:** Used for **navigation icons, buttons, and status indicators**.  
+
+
+🔹 **Google Fonts**  
+- **URL:** [Google Fonts](https://fonts.google.com/)  
+- **Purpose:** Adds **custom typography** to enhance the web app’s visual appeal.  
+- **Usage:** Used in **headers and key UI elements** for better readability and branding.  
+
+
+🔹 **App.Bots.Business**  
+- **URL:** [App.Bots.Business](https://app.bots.business/)  
+- **Purpose:** **Hosts all HTML and BJS code for free**, eliminating the need for paid hosting services.  
+- **Why?** This platform allows **free deployment** of the entire web app, making it **cost-effective and accessible**.  
+- **Cost:** **$0 spent on hosting**.  
+
+---
+
+> By leveraging these **powerful libraries and services**, **BB Point WebApp Bot** delivers a **high-performance, user-friendly, and visually appealing** experience while remaining **completely free to run**. 🚀
+
+---
+
+# /tip Command  
+The **/tip** command allows users to **reward others** in a group chat by sending BB Points. This feature is useful for **appreciating contributions** and **encouraging engagement** within the community.  
+
+**🚀 How to Use**  
+
+1. **Reply to a user’s message** in a group where the bot is an **admin**.  
+2. Send the command in the following format: /tip amount, Example: `/tip 10`
+
+3. The **tipped amount** is **instantly transferred** to the user.  
+
+**🔔 Notifications & Logging** 
+- **Transaction is saved** for record-keeping.  
+- **Webhook Notification** – Sent if the user has a webhook set.  
+- **Announcement in Channel** – If both sender and receiver have enabled announcements.
+---
+
+# Tester Notes  
+
+- **Full-Screen Mode** – Provides an immersive user experience.  
+- **Closing Confirmation** – Prevents accidental exits.  
+- **Back Navigation** – Supports both Telegram’s back button & device navigation.  
+- **QR Code Scanner** – Easily pay invoices or users via QR codes.  
+- **Consistent UI** – All pages follow the same clean design.  
+- **Multi-User Gift System** – Create gifts that multiple users can claim.  
+- **Secure Transactions** – Every payment requires PIN verification.  
+- **API Support** – Fully integrated for automation & external apps.  
+
+## 🔥 Smart Features  
+
+- **Saves Only Last 5 Transactions** – Prevents the **wholeUser** bug by storing them separately:  
+  ```js
+  Bot.setProp(userId + "transactions", transactions);
+  ```
+- **Unified Page Rendering** – Only **one command** is needed to render all HTML pages:
+  
+ ```js
+const templates = {
+  pay: "payment.html",
+  main: "app.html",
+  request: "request.html",
+  buy: "buy.html",
+  claim_gift: "claim-gift.html",
+  create_gift: "create-gift.html",
+  settings: "settings.html"
+};
+
+const template = templates[options.page];
+
+if (template) {
+  WebApp.render({ template });
+} else {
+  WebApp.render({
+    mime_type: "application/json",
+    content: {
+      status: "error",
+      msg: "❌ Invalid page parameter."
+    }
+  });
+}
+```
+
+**💳 Payments & Features**  
+
+- **Invoice Creation** – Perfect for **small businesses** accepting BBP.  
+- **Invoice Documentation** – Track payments with structured API support.  
+- **Telegram Stars Integration** – Buy BB Points directly using Stars.  
+- **/tip Command** – Easily tip users in groups.  
+
+**🔧 Improvements**  
+
+- **Removed Group Mute on Negative BBP** – Focused on payments, not moderation.  
+- **Disabled Vertical Swipe to Close WebApp** – Prevents accidental closures.  
+
+A **secure, API-powered, user-friendly WebApp** with **seamless payments & advanced features**! 🚀
 
 
 
