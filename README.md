@@ -242,6 +242,67 @@ The **Create Gift** feature allows users to distribute BB Points among multiple 
 - If **PIN verification fails**, the bot will **vibrate and show a Telegram-style popup** with the issue.
 
 
+
+# Claim Gift  
+Claiming a gift in **BB Point WebApp Bot** is a **simple and seamless process**. No **PIN verification** is required for claiming, but **you must have a PIN set** in the bot. This security measure ensures that only **real users** can claim gifts, preventing unauthorized access and abuse.  
+
+---
+
+**🖼️ Claim Gift Page**
+
+![Claim Gift Screenshot](https://github.com/nasirul786/BB-Point-API/blob/main/img/claim-gift.jpg)  
+
+---
+
+**🚀 How to Claim a Gift** 
+
+1. Open the **BB Point WebApp Bot** and tap the **"Gifts"** icon on the homepage.  
+2. Enter the **Gift Code** provided by the sender.  
+3. If the gift is **password-protected**, enter the **correct password**.  
+4. Tap **"Claim Gift"** to receive the BB Points instantly.  
+
+No additional steps or manual verification are required. If the details are correct, the gift will be credited to your account immediately. and the page will show the details of the gift and remaining claims. also yhe transaction will record to the history (last 5 transaction), and send channel announcement if enabled, send webhook notification if set.  
+
+---
+
+**🔐 Security & User Verification**
+
+To maintain security and prevent fraudulent claims, every user **must have a PIN set** in the bot. This does not mean you need to enter a PIN when claiming, but having a PIN **proves you are a verified user**.  
+
+> This system **blocks fake users** from using the **Claim Gift API** to repeatedly claim the same gift with different user IDs. If a user has set up a PIN, they are recognized as a **real account**, ensuring a fair and safe environment for gift distribution.
+
+
+
+# Settings  
+The **Settings** page in **BB Point WebApp Bot** allows users to manage various preferences for a more customized experience. Users can **enable or disable payment requests, transaction announcements, and set up a webhook for real-time transaction alerts.**  
+
+**Settings Page ScreenShot**
+
+![setting page](https://github.com/nasirul786/BB-Point-API/blob/main/img/settings.jpg)
+
+---
+
+🔹 **Block or Allow Payment Requests**  
+If you don’t want users to send you **payment requests**, you can **disable** this feature. Once disabled, no one will be able to **request payments** from you. You can **re-enable it anytime** if needed.  
+
+🔹 **Enable or Disable Payment Announcements**  
+By enabling **payment announcements**, your transactions will be posted on our **Telegram channel**: [BBP Transactions](https://t.me/bbpTransactions).
+- **Both parties** (sender and receiver) **must enable** this setting for the transaction to be announced.  
+- If only a **single party** is involved (e.g., creating or claiming a gift), only **their** announcement setting matters.
+
+🔹 **Add App icon to the HomeScreen**
+Click the **Add TO HomeScreen** button to add thhe app icon to the home screen, like an regular mobile apps, it will be available on the users phone home screen allowing them to open the app direcly without opening telegram. the button design is and color is matches with users telegram theme. (we have theme params function on webApp to detect the theme button color). 
+
+🔹 **Set Webhook URL for Real-Time Alerts**  
+Since the bot **does not store complete transaction history** due to limitations, users can set up a **webhook** to receive transaction details **instantly**.  
+
+- The bot sends **POST data** to the webhook URL you set.  
+- This allows users to **store transaction history** on their own servers.  
+- Refer to the **[Webhook Types](https://captain-1.gitbook.io/bb-point-api/api-documentation/webhook-types)** page to see all available webhook notifications.
+> With these settings, users have **full control** over how their transactions are managed, announced, and stored. 🚀  
+
+
+
 ## Why Use BB Point WebApp Bot?  
 - ✅ **Fast, secure, and API-ready**  
 - ✅ **Intuitive interface & navigation**  
