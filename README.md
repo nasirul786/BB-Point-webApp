@@ -11,17 +11,18 @@ BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users t
 
 ## 🔥 Key Features  
 
-- **[Homepage](#-modern--stylish-homepage)** - Homepae of the App with all options.
+- **[Homepage](#homepage--bb-point-webapp-bot)** - Homepae of the App with all options.
 - **[QR Code Payment](#scan-qr-code-to-pay)** – Scan a QR code to pay instantly.  
-- **[Pay Any User](api/send-payment.md)** – Send BB Points to any user via their Telegram ID.  
-- **[Request Payment](api/request.md)** – Easily request payments from users.  
+- **[Pay Any User](#pay-to-any-user)** – Send BB Points to any user via their Telegram ID.  
+- **[Request Payment](#request-payment)** – Easily request payments from users.  
 - **[Create & manage Invoice](https://captain-1.gitbook.io/bb-point-api/api-documentation/create-invoice)** – Generate invoices for accepting payments.
-- **[Create Gift](api/create-gift.md)** – Distribute BB Points among multiple users with an optional password.  
-- **[Claim Gift](api/claim-gift.md)** – Users can redeem gifts securely.  
-- **[Settings](api/get-settings.md)** – Manage settings: Request , Webhook for real-time alerts, and toggle transaction announcements! 🚀
-- **[Buy BB Points with Telegram Stars](api/BBP-purchase.md)** – Exchange **Stars** for **BB Points**.
-- **[Dependencies](#)** - The libraries and api used to make this bot possible.
-- **[For Tester](#)** - Addition notes and Check why this app is greate.
+- **[Create Gift](#create-gift)** – Distribute BB Points among multiple users with an optional password.  
+- **[Claim Gift](#claim-gift)** – Users can redeem gifts securely.  
+- **[Settings](#settings)** – Manage settings: Request , Webhook for real-time alerts, and toggle transaction announcements! 🚀
+- **[Buy BB Points with Telegram Stars](#buy-bb-point)** – Exchange **Stars** for **BB Points**.
+-  **[Tipping](#tip-command)** - Tip BBP to other user on group.
+- **[Dependencies](#dependencies--libraries)** - The libraries and api used to make this bot possible.
+- **[For Tester](#tester-notes)** - Addition notes and Check why this app is greate.
 
 # Homepage – BB Point WebApp Bot  
 The **BB Point WebApp Bot** homepage provides a **clean, modern, and intuitive interface** for seamless transactions. It is designed to make navigation easy, with all **core functions accessible via icons** at the top and a **transaction history** section below.  
@@ -275,7 +276,7 @@ To maintain security and prevent fraudulent claims, every user **must have a PIN
 # Settings  
 The **Settings** page in **BB Point WebApp Bot** allows users to manage various preferences for a more customized experience. Users can **enable or disable payment requests, transaction announcements, and set up a webhook for real-time transaction alerts.** 
 
-**[How to Get setting page?](#%EF%B8%8F-navigating-to-settings)
+**[How to Get setting page?](#%EF%B8%8F-navigating-to-settings)**
 
 **Settings Page ScreenShot**
 
