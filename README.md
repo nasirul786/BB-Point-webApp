@@ -1,11 +1,9 @@
 # bbp_app_bot - chat bot
 It is repository for chat bot: [@bbp_app_bot](https://t.me/bbp_app_bot)
 
-# Introduction
-
 ## BB Point WebApp Bot  
 
-**BB Point WebApp Bot** is a powerful **Telegram WebApp bot** designed to provide a **seamless, secure, and feature-rich** payment experience. It offers **API support** and multiple advanced functionalities, making it an essential tool for transactions within the Telegram ecosystem.  
+**BB Point WebApp Bot** is a powerful **Telegram WebApp bot** designed to provide a **seamless, secure, and feature-rich** BBP payment experience. It offers **API support** and multiple advanced functionalities, making it an essential tool for transactions within the Telegram ecosystem.  
 
 With an intuitive **user interface, QR code scanning, haptic feedback, and easy navigation**, users can perform various financial actions effortlessly. Every transaction is **secured with PIN verification**, ensuring **maximum security**, even though the bot is **open-source**.  
 
@@ -54,7 +52,7 @@ The homepage consists of **six primary buttons**, allowing users to **perform tr
 
 ---
 
-## 📌 **Transaction History**  
+📌 **Transaction History**  
 
 Below the action buttons, the homepage displays the **last 5 transactions**. Each transaction entry includes:  
 
@@ -73,18 +71,7 @@ Below the action buttons, the homepage displays the **last 5 transactions**. Eac
 To access the **Settings page**:  
 
 1. Click on the **three-dot menu (⋮)** in the top-right corner.  
-2. Select **"Settings"** to manage preferences like **PIN security, webhook setup, and transaction announcements**.  
-
----
-
-## 📌 **Additional Features**  
-
-- **App Header** – The header displays **"BBP App"**, below the **current BBP balance**.  
-- **Closing Confirmation** – When exiting, a confirmation prompt ensures accidental closures are avoided.
-- **disabled virticle sweep** - To make the experience better.
-- **Full-Screen View** – The bot runs in **full-screen mode**, fully optimized for **Telegram’s WebApp ecosystem**.  
-
-BB Point WebApp Bot's homepage ensures a **smooth, intuitive, and efficient experience**, making it **easy to manage BB Point transactions with a few taps!** 🚀  
+2. Select **"Settings"** to manage preferences like **Acept Request, webhook setup, and transaction announcements**.
 
 
 # Scan QR Code to Pay  
@@ -117,7 +104,7 @@ the QR title (receiver name) shows above the fileds, each fields hase representi
 | **Invoice QR** | Opens the **PIN input popup** instantly for payment confirmation. |
 | **User Payment QR** | Pre-fills the payment page with recipient details for manual confirmation. |
 
-- The payment process **uses the [Send Payment API](https://github.com/nasirul786/BB-Point-API/blob/main/api/send-payment.md)**, meaning:  
+- The payment process **uses the [Send Payment API](https://captain-1.gitbook.io/bb-point-api/api-documentation/send-payment)**, meaning:  
   - **Fake invoices** or incorrect payments **are automatically detected**.  
   - If **an error occurs**, the bot **displays a Telegram-style popup** with detailed information and provides **haptic feedback**.  
 
@@ -163,23 +150,15 @@ The **Pay to Any User** feature allows users to **send BB Points** directly to a
 
 ---
 
-🔒 **Security & Processing**  
-
-- The transaction is **processed securely** using the **[Send Payment API](api/send-payment.md)**.  
-- **All transactions require PIN verification**, ensuring that only the account owner can authorize payments.  
-- Transactions **cannot be reversed** once completed.  
-
----
-
 🔔 **Payment Notifications & Webhooks**  
 
 - **Transaction Announcements**  
-  - If **both sender and receiver** have enabled **transaction announcements** in settings, they will receive a **notification**.  
+  - If **both sender and receiver** have enabled **transaction announcements** in settings, the transaction details will be send to our public telegram channel: **[@bbpTransactions](https://t.me/bbpTransactions)**.  
 
 - **Webhook Notifications**  
   - If a **webhook is set**, a **real-time transaction notification** is sent.  
   - If **no webhook is set**, the process **ignores the webhook step** without errors.
-  - See all webhook types [Here](https://github.com/nasirul786/BB-Point-API/blob/main/api/webhook-types.md)
+  - See all webhook types [Here](https://captain-1.gitbook.io/bb-point-api/api-documentation/webhook-types)
  
 
 # Request Payment  
@@ -189,7 +168,7 @@ The **Request Payment** feature allows users to **send a payment request** to an
 
 ![request](https://github.com/nasirul786/BB-Point-API/blob/main/img/success-request.jpg)
 
-**Requst Failed**
+**Requst Failed ScreenShot**
 
 ![faild request](https://github.com/nasirul786/BB-Point-API/blob/main/img/request-failed.jpg)
 
@@ -202,7 +181,7 @@ Click **Request** button on the home screen to go to request section.
 2. Click **Request Payment** and enter pin to confirm.  
 3. **Success Confirmation**  
    - If successful, a **popup** appears with the **request ID** and details.  
-   - The recipient gets notified of the request with all the details along with button to accept or reject te rqust.
+   - The recipient gets notified of the request with all the details along with button to accept or reject the requst.
  > Webhook notification will e sent once the request is beeing accepted.
 
 
@@ -213,9 +192,6 @@ The **Create Gift** feature allows users to distribute BB Points among multiple 
 
 🖼️ Screenshot of Create Gift Page  
 ![Create Gift Screenshot](https://github.com/nasirul786/BB-Point-API/blob/main/img/create-gift.jpg) 
-
-**Gift Details on DM**
-![gift on dm](https://github.com/nasirul786/BB-Point-API/blob/main/img/gift-dm.jpg)
 
 ---
 
@@ -244,6 +220,9 @@ The **Create Gift** feature allows users to distribute BB Points among multiple 
    - The system **automatically calculates** the **prize per user** based on the total amount and user count.  
 
 ---
+
+**Gift Details on DM**
+![gift on dm](https://github.com/nasirul786/BB-Point-API/blob/main/img/gift-dm.jpg)
 
 🎁 **Gift Creation Confirmation**  
 
