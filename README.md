@@ -61,7 +61,7 @@ Below the action buttons, the homepage displays the **last 5 transactions**. Eac
 
 ---
 
-⚙️ **Navigating to Settings**  
+##  ⚙️ **Navigating to Settings**  
 
 To access the **Settings page**:  
 
@@ -273,7 +273,9 @@ To maintain security and prevent fraudulent claims, every user **must have a PIN
 
 
 # Settings  
-The **Settings** page in **BB Point WebApp Bot** allows users to manage various preferences for a more customized experience. Users can **enable or disable payment requests, transaction announcements, and set up a webhook for real-time transaction alerts.**  
+The **Settings** page in **BB Point WebApp Bot** allows users to manage various preferences for a more customized experience. Users can **enable or disable payment requests, transaction announcements, and set up a webhook for real-time transaction alerts.** 
+
+**[How to Get setting page?](#%EF%B8%8F-navigating-to-settings)
 
 **Settings Page ScreenShot**
 
