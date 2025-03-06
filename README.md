@@ -23,6 +23,7 @@ BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users t
 -  **[Tipping](#tip-command)** - Tip BBP to other user on group.
 - **[Dependencies](#dependencies--libraries)** - The libraries and api used to make this bot possible.
 - **[For Tester](#tester-notes)** - Addition notes and Check why this app is greate.
+-  **[How to set-up?](#Setup-proccess)** - See how to setup bot.
 
 # Homepage – BB Point WebApp Bot  
 The **BB Point WebApp Bot** homepage provides a **clean, modern, and intuitive interface** for seamless transactions. It is designed to make navigation easy, with all **core functions accessible via icons** at the top and a **transaction history** section below.  
@@ -464,6 +465,21 @@ if (template) {
 A **secure, API-powered, user-friendly WebApp** with **seamless payments & advanced features**! 🚀
 
 
+
+# Setup Instructions  
+
+## 📌 How to Set Up  
+
+1. **Clone the Bot**  
+   - If available, **clone from the Bot Store**.  
+   - Alternatively, clone from **GitHub** using this link
+2. **Set Admins**  
+   - Go to the `@` (**Run Before All Commands**) command.  
+   - Add the **User IDs** of the admins.  
+
+3. **Done!** 🎉  
+   The bot is now **ready to use** with full functionality. 🚀  
+---
 
 ## Why Use BB Point WebApp Bot?  
 - ✅ **Fast, secure, and API-ready**  
