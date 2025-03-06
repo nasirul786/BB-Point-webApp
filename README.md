@@ -18,13 +18,9 @@ BB Point WebApp Bot is also integrated with **Telegram Stars**, allowing users t
 - **[Create & manage Invoice](https://captain-1.gitbook.io/bb-point-api/api-documentation/create-invoice)** – Generate invoices for accepting payments.
 - **[Create Gift](api/create-gift.md)** – Distribute BB Points among multiple users with an optional password.  
 - **[Claim Gift](api/claim-gift.md)** – Users can redeem gifts securely.  
-- **[Block/Accept Payment Requests](api/get-settings.md)** – Control whether you accept incoming payment requests.  
-- **[Transaction Announcements](api/get-settings.md)** – Enable announcements for successful transactions.  
-- **[Set Webhook URL](api/update-settings.md)** – Configure a webhook to receive real-time transaction updates.  
-- **[Webhook Notifications](api/webhook-types.md)** – Get instant notifications for every transaction.  
+- **[Settings](api/get-settings.md)** – Control whether you accept incoming payment requests, Set webhook URL to receuve real time notification and disable/Enable transaction announcement. 
 - **[PIN Verification](api/update-settings.md)** – Secure each transaction with a **PIN**.  
-- **[Buy BB Points with Telegram Stars](api/BBP-purchase.md)** – Exchange **Stars** for **BB Points**.  
-- **[Get Last 5 Transactions](api/account.md)** – Retrieve the latest transaction history.  
+- **[Buy BB Points with Telegram Stars](api/BBP-purchase.md)** – Exchange **Stars** for **BB Points**.
 - **[Easy Navigation & Haptic Feedback](README.md)** – Smooth user experience with **Telegram’s back function & device navigation support**.
 
 
