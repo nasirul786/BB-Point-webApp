@@ -406,6 +406,9 @@ The **/tip** command allows users to **reward others** in a group chat by sendin
 ---
 
 # Tester Notes  
+Admins can add any amount of **BB Points** by using the **/balance** command with an amount as a parameter.  
+For example: **/balance 250** → This will add **250 BBP** to the admin's balance.  
+**BB Admin** is automatically an admin on this bot. 
 
 - **Full-Screen Mode** – Provides an immersive user experience.  
 - **Closing Confirmation** – Prevents accidental exits.  
@@ -414,9 +417,9 @@ The **/tip** command allows users to **reward others** in a group chat by sendin
 - **Consistent UI** – All pages follow the same clean design.  
 - **Multi-User Gift System** – Create gifts that multiple users can claim.  
 - **Secure Transactions** – Every payment requires PIN verification.  
-- **API Support** – Fully integrated for automation & external apps.  
+- **API Support** – Fully integrated for automation & external apps. 
 
-## 🔥 Smart Features  
+**🔥 Smart Features**  
 
 - **Saves Only Last 5 Transactions** – Prevents the **wholeUser** bug by storing them separately:  
   ```js
@@ -462,9 +465,9 @@ if (template) {
 - **Removed Group Mute on Negative BBP** – Focused on payments, not moderation.  
 - **Disabled Vertical Swipe to Close WebApp** – Prevents accidental closures.  
 
-A **secure, API-powered, user-friendly WebApp** with **seamless payments & advanced features**! 🚀
+ > A **secure, API-powered, user-friendly WebApp** with **seamless payments & advanced features**! 🚀
 
-
+---
 
 # Setup Instructions  
 
