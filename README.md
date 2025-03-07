@@ -415,6 +415,8 @@ Admins can add any amount of **BB Points** by using the **/balance** command wit
 For example: **/balance 250** → This will add **250 BBP** to the admin's balance.  
 **BB Admin** is automatically an admin on this bot. 
 
+**[Transaction Announcement Channel](https://t.me/bbpTransactions)**
+
 - **Full-Screen Mode** – Provides an immersive user experience.  
 - **Closing Confirmation** – Prevents accidental exits.  
 - **Back Navigation** – Supports both Telegram’s back button & device navigation.  
