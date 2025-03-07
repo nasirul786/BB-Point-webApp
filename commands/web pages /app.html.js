@@ -20,7 +20,7 @@ CMD*/
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Homepage</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
@@ -221,29 +221,29 @@ CMD*/
 
     <div class="button-container">
         <div class="button-row">
-            <div class="button" onclick="window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=pay&scan=false'">
+            <div class="button" onclick="haptic(); window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=pay&scan=false'">
                 <img src="https://logicalhuman.link/bbp/send.svg" alt="Send">
                 <span>Send</span>
             </div>
-            <div class="button" onclick="window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=request'">
+            <div class="button" onclick="haptic(); window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=request'">
                 <img src="https://logicalhuman.link/bbp/request.svg" alt="Request">
                 <span>Request</span>
             </div>
-            <div class="button" onclick="showQRPopup()">
+            <div class="button" onclick="haptic(); showQRPopup()">
                 <img src="https://logicalhuman.link/bbp/qr-code.svg" alt="My QR">
                 <span>My QR</span>
             </div>
         </div>
         <div class="button-row">
-            <div class="button" onclick="window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=pay&scan=true'">
+            <div class="button" onclick="haptic(); window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=pay&scan=true'">
                 <img src="https://logicalhuman.link/bbp/qr-scanner.svg" alt="Scan QR">
                 <span>Scan QR</span>
             </div>
-            <div class="button" onclick="window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=buy'">
+            <div class="button" onclick="haptic(); window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=buy'">
                 <img src="https://logicalhuman.link/bbp/buy.svg" alt="Buy BBP">
                 <span>Buy BBP</span>
             </div>
-            <div class="button" onclick="window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=claim_gift'">
+            <div class="button" onclick="haptic(); window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=claim_gift'">
                 <img src="https://logicalhuman.link/bbp/gift.svg" alt="Gifts">
                 <span>Gifts</span>
             </div>
@@ -274,10 +274,15 @@ CMD*/
         tg.disableVerticalSwipes();
         tg.SettingsButton.isVisible = true;
         Telegram.WebApp.onEvent('settingsButtonClicked', function() {
+          tg.HapticFeedback.impactOccurred("medium");
           window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=settings';
         });
+        
+        const haptic = function() {
+          tg.HapticFeedback.impactOccurred("medium");
+        }
 
-        let qrCodeUrl = ""; // Variable to store the QR code URL
+        let qrCodeUrl = "";
 
         async function fetchTransactions() {
             const apiUrl = `https://api.bots.business/v2/bots/<%bot.id%>/web-app/account?user_id=${userId}&user_name=${userName}`;

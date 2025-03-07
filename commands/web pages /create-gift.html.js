@@ -20,7 +20,7 @@ CMD*/
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"">
     <title>Create Gift</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@ CMD*/
             display: flex;
             flex-direction: column;
             height: 100vh;
-            justify-content: flex-start; /* Align content to the top */
+            justify-content: flex-start;
             align-items: center;
             margin: 0;
             padding: 0;
@@ -80,7 +80,7 @@ CMD*/
             font-weight: 600;
             font-size: 16px;
             text-align: left;
-            padding-left: 40px; /* Space for icons */
+            padding-left: 40px;
             transition: all 0.3s ease;
             box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
         }
@@ -344,6 +344,7 @@ CMD*/
         const tg = window.Telegram.WebApp;
         tg.BackButton.show();
         tg.BackButton.onClick(() => {
+           tg.HapticFeedback.impactOccurred("medium");
             window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=main';
         });
         tg.requestFullscreen();

@@ -31,11 +31,11 @@ Api.editMessageMedia({
   reply_markup: JSON.stringify({
     inline_keyboard: [
       [
-        { text: "➕ Send Points", callback_data: "/send" },
-        { text: "🔗 Request Points", callback_data: "request" }
+        { text: "➕ Send Points", web_app: {url: "https://api.bots.business/v2/bots/"+bot.id+"/web-app/apps?page=pay" }},
+        { text: "🔗 Request Points", web_app: {url: "https://api.bots.business/v2/bots/"+bot.id+"/web-app/apps?page=request" }}
       ],
       [
-        { text: "🌐 Open WebApp", web_app: { url: "https://example.com" } }
+        { text: "Back", callback_data: "/start" }
       ]
     ]
   })

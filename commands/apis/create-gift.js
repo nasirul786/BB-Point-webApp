@@ -195,7 +195,7 @@ action.sendMessage({
   reply_markup: {
     inline_keyboard: [
       [{ text: "Copy Gift Code", copy_text: { text: giftCode } }],
-      [{ text: "Share Gift Link", url: `https://t.me/share/url?url=%2A%2AGIFT%20FOR%20YOU%0A%0A${description}%0A%0At.me/${bot.name}?start=gift${giftCode}` }]
+      [{ text: "Share Gift Link", url: `https://t.me/share/url?url=%2A%2AGIFT%20FOR%20YOU%2A%2A%0A%0A${description}%0A%0At.me/${bot.name}?start=gift${giftCode}` }]
     ]
   }
 });

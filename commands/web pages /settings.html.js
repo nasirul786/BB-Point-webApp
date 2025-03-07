@@ -20,7 +20,7 @@ CMD*/
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"">
     <title>Settings</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -239,8 +239,12 @@ CMD*/
     <script>
         window.Telegram.WebApp.ready();
         const tg = window.Telegram.WebApp;
+        const haptic = function() {
+          tg.HapticFeedback.impactOccurred("medium");
+        }
         tg.BackButton.show();
         tg.BackButton.onClick(() => {
+           tg.HapticFeedback.impactOccurred("medium");
             window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=main';
         });
         tg.requestFullscreen();
@@ -249,10 +253,14 @@ CMD*/
         let pin = "";
 
         // Configure Telegram MainButton for PIN confirmation
-        tg.MainButton.setText("Confirm")
-            .setParams({ hasShineEffect: true }) // Add shine effect
-            .onClick(() => verifyPin())
-            .show();
+       tg.MainButton.setText("Confirm")
+    .setParams({ has_shine_effect: true }) 
+    .onClick(() => {
+        verifyPin();
+        haptic();
+    })
+    .show();
+
 
         function verifyPin() {
             pin = document.getElementById("pin").value.trim();
@@ -282,8 +290,7 @@ CMD*/
 
                     // Change MainButton to "Add to Homescreen"
                     tg.MainButton.setText("Add to Homescreen")
-                        .setParams({ hasShineEffect: true }) // Add shine effect
-                        .offClick() // Remove previous click handler
+                      .offClick() // Remove previous click handler
                         .onClick(() => addToHomeScreen()) // Set new click handler
                         .show();
                 } else {
