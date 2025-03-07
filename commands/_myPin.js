@@ -1,12 +1,18 @@
 /*CMD
   command: /myPin
   help: 
-  need_reply: 
+  need_reply: false
   auto_retry_time: 
   folder: 
-  answer: 
-  keyboard: 
-  aliases: 
+
+  <<ANSWER
+
+  ANSWER
+
+  <<KEYBOARD
+
+  KEYBOARD
+  aliases: /mypin
   group: 
 CMD*/
 
