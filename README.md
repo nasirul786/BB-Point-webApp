@@ -73,6 +73,9 @@ To access the **Settings page**:
 1. Click on the **three-dot menu (⋮)** in the top-right corner.  
 2. Select **"Settings"** to manage preferences like **Acept Request, webhook setup, and transaction announcements**.
 
+![Navigating to Settings](https://github.com/nasirul786/BB-Point-API/blob/main/img/get-settings.jpg)
+
+--
 
 # Scan QR Code to Pay  
 The **BB Point WebApp Bot** allows users to **scan QR codes** for **quick and seamless payments**. The QR code scanner is fully integrated with **Telegram's native scanning feature**, ensuring fast and secure transactions.  
