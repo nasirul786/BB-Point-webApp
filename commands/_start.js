@@ -102,3 +102,10 @@ Api.sendMessage({
   }
 });
 
+
+// delete the previous message if the command triggered from an inline image 
+if (request.message && request.message.message_id) {
+  Api.deleteMessage({
+    message_id: request.message?.message_id
+  })
+}

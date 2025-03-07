@@ -20,7 +20,7 @@ CMD*/
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"">
     <title>Buy BBP</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -246,6 +246,7 @@ CMD*/
         const tg = window.Telegram.WebApp;
         tg.BackButton.show();
         tg.BackButton.onClick(() => {
+           tg.HapticFeedback.impactOccurred("medium");
             window.location.href = 'https://api.bots.business/v2/bots/<%bot.id%>/web-app/apps?page=main';
         });
         tg.requestFullscreen();
