@@ -1,9 +1,6 @@
 # bbp_app_bot - chat bot
 It is repository for chat bot: [@bbp_app_bot](https://t.me/bbp_app_bot)
 
-# bbp_app_bot - chat bot
-It is repository for chat bot: [@bbp_app_bot](https://t.me/bbp_app_bot)
-
 ## BB Point WebApp Bot  
 
 **BB Point WebApp Bot** is a powerful **Telegram WebApp bot** designed to provide a **seamless, secure, and feature-rich** BBP payment experience. It offers **API support** and multiple advanced functionalities, making it an essential tool for transactions within the Telegram ecosystem.  
