@@ -497,4 +497,4 @@ if (template) {
 - ✅ **Real-time webhook notifications**  
 - ✅ **Seamless Telegram integration**  
 
-Ready to explore? Get started with the **[API Documentation](SUMMARY.md)**. 🚀
+Ready to explore? Get started with the **[API Documentation](https://captain-1.gitbook.io/bb-point-api)**. 🚀
