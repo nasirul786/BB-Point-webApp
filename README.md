@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> 2nd place at BB WebApp making contest but now this bot will not work since bot business does not support webApp publishing now. 
+
 # bbp_app_bot - chat bot
 It is repository for chat bot: [@bbp_app_bot](https://t.me/bbp_app_bot)
 
